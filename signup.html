@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/loginSignup.css">
+    <title>KWICK</title>
+</head>
+<body>
+    <section>
+        <h1>KWICK</h1>
+        <p id="signal"></p>
+        <form id="form">
+            
+           
+            <label for="username">Nom d'utilisateur:</label>
+            <input type="text" name="username" id="username" placeholder="Username" required>
+            <label for="password">Mot de passe:</label>
+            <input type="password" name="password" id="password" placeholder="Password" required>
+            <label for="confirmPassword">Retapez le mot de passe:</label>
+            <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm the password" required>
+            <input type="submit" onclick="signup()" class="btn" value="S'INSCRIRE">
+            <a href="index.html">Se connecter</a>
+        </form>
+    </section>
+    <script src="js/signup.js"></script>
+</body>
+</html>

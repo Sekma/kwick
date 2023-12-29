@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/messages.css">
+    <title>KWICK</title>
+</head>
+<body>
+    <dialog id="dialog" class="did">
+        <p id="signal"></p>
+        <input type="button" onclick="dialog.close()" value="OK">
+    </dialog>
+    <section>
+        <h1>KWICK</h1>
+        <h3>Welcome <span id="welcome-username"></span></h3>
+        <input type="submit" value="deconnexion" onclick="logout()">
+        <ul id="logged">
+
+        </ul>
+    </section>
+    <script src="js/logout.js"></script>
+    <script src="js/messages.js"></script>
+</body>
+</html>
