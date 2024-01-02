@@ -1,8 +1,77 @@
-
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  width: 100%;
+  height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.4);
+  padding: 10px 0;
+}
+nav h1, nav h3, nav input{
+  padding: 10px;
+}
+nav h1{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: rgb(23, 107, 135);
+}
 .did{
     margin: 100px auto;
     border-radius: 20px;
     text-align: center;
     padding: 30px;
     background-color: rgb(177, 177, 219);
+  }
+  main{
+    display: flex;
+  }
+  .connected{
+    width: 20%;
+    height: 80vh;
+    padding: 10px;
+  }
+  .logged{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+  }
+  .logged li::before {
+    content: "\2022";
+    color: green;
+    font-size: 30px;
+    position: relative;
+    top: 5px;
+    right: 10px;
+    margin-left: 50px;
+  }
+  .discussion{
+    width: 80%;
+    height: 80vh;
+    padding: 10px;
+    box-shadow: -2px 2px 2px 0px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+  .discussion div{
+    margin-bottom: 10px;
+    background-color: aqua;
+  }
+  .discussion input.msg{
+    padding: 5px;
+    width: 90%;
+  }
+  .discussion input.btn-send{
+    padding: 5px;
+    width: 5%;
   }

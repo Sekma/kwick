@@ -7,19 +7,47 @@
     <title>KWICK</title>
 </head>
 <body>
-    <dialog id="dialog" class="did">
-        <p id="signal"></p>
-        <input type="button" onclick="dialog.close()" value="OK">
-    </dialog>
-    <section>
-        <h1>KWICK</h1>
-        <h3>Welcome <span id="welcome-username"></span></h3>
-        <input type="submit" value="deconnexion" onclick="logout()">
-        <ul id="logged">
-
-        </ul>
-    </section>
+    <header>
+        <nav>
+            <h1><img src="img/Messaging.png" alt="logo" width="50"> KWICK</h1>
+            <h3>Welcome <span id="welcome-username"></span></h3>
+            <input type="submit" value="deconnexion" onclick="logout()">
+        </nav>
+    </header>
+    <main>
+        <dialog id="dialog" class="did">
+            <p id="signal"></p>
+            <input type="button" onclick="dialog.close()" value="OK">
+        </dialog>
+        <section class="connected">
+            <ul class="logged" id="logged">
+                <li>bill</li>
+                <li>paul</li>
+                <li>rose</li>
+                <li>diana</li>
+            </ul>
+        </section>
+        <section class="discussion">
+            <div>
+                <h3>bill</h3>
+                <p>hello</p>
+            </div>
+            <div>
+                <h4>paul</h4>
+                <p>hello</p>
+            </div>
+            <div>
+                <h4>rose</h4>
+                <p>hello</p>
+            </div>
+            <div>
+                <input type="text" class="msg">
+                <input type="button" value=">" class="btn-send">
+            </div>
+        </section>
+    </main>
+    
     <script src="js/logout.js"></script>
-    <script src="js/messages.js"></script>
+    <script src="js/logged.js"></script>
 </body>
 </html>
