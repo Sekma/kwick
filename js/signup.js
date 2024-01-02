@@ -21,7 +21,7 @@
 				let confirmPassword = localStorage.getItem("confirmPassword");
 
 				// appel de l'URL api pour l'inscription d'un nouvel utilisateur.
-				const url = 'http://greenvelvet.alwaysdata.net/kwick/api/signup/'+name+'/'+password;
+				const url = 'https://greenvelvet.alwaysdata.net/kwick/api/signup/'+name+'/'+password;
 				const options = {
 				method: 'GET',
 			};

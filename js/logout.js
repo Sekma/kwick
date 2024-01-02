@@ -3,7 +3,7 @@
             let id = localStorage.getItem("id");       // on récupere l'ID et le "token" du localStorage, qui sont déja stoqués à la 
             let token = localStorage.getItem("token"); // page précédente, que ce soit la page index (login) ou la page signup.
             
-            const url = 'http://greenvelvet.alwaysdata.net/kwick/api/logout/'+token+'/'+id; 
+            const url = 'https://greenvelvet.alwaysdata.net/kwick/api/logout/'+token+'/'+id; 
             const options = {
             method: 'GET',
         };

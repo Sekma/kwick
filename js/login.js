@@ -13,7 +13,7 @@ function login(){// quand l'utilisateur rempli le formulaire de login et click s
             let name = localStorage.getItem("name");
             let password = localStorage.getItem("password"); // puis les récuperer pour l'URL de login.
             
-            const url = 'http://greenvelvet.alwaysdata.net/kwick/api/login/'+name+'/'+password;
+            const url = 'https://greenvelvet.alwaysdata.net/kwick/api/login/'+name+'/'+password;
             const options = {
             method: 'GET',
             };
