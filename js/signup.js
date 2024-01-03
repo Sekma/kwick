@@ -32,7 +32,7 @@
 					if(password==confirmPassword && name){         // si le mot de passe et la confirmation sont égales
 						const response = await fetch(url, options);// activer L'URL 
 						const object = await response.json();      // et stoquer la reponse dans un objet JSON.
-						
+						console.log(object);
 						let loginId= object.result.id;             
 									   // si le nom d'utilisateur est déja utilisé, l'ID retourné est égale à 0.
 						if(loginId>0){ // donc la première condition est si l'ID retourné dans l'objet et supérieur à 0. 
