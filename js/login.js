@@ -11,9 +11,9 @@ function login(){// quand l'utilisateur rempli le formulaire de login et click s
         async function getLogin(){
 
             let name = localStorage.getItem("name");
-            let password = localStorage.getItem("password"); // puis les récuperer pour l'URL de login.
+            let password = localStorage.getItem("password"); // puis les récuperer pour l'URL de "login".
             
-            const url = 'https://greenvelvet.alwaysdata.net/kwick/api/login/'+name+'/'+password;
+            const url = 'https://greenvelvet.alwaysdata.net/kwick/api/login/'+name+'/'+password; // l'URL
             const options = {
             method: 'GET',
             };
@@ -37,7 +37,13 @@ function login(){// quand l'utilisateur rempli le formulaire de login et click s
                                       localStorage.setItem("msg", msg);    // stoquer le message envoyé par l'objet JSON dans le localStorage,
                                                                            // pour le récupérer et l'afficher dans la page suivante.
 
-                                      window.location.assign('messages.html');// puis on charge et affiche la page de messagerie.
+                                    // afficher une fenetre (dialog), récuperer et afficher le message de "welcome back".
+                                    document.getElementById("dialog").show(); 
+                                    document.getElementById('signal').innerText = localStorage.getItem("msg");
+                                    
+                                      // et après 3 secondes on charge et affiche la page de messagerie.
+                                      setTimeout(function openPage(){window.location.assign('messages.html')},3000);
+
                         }else{    // si l'ID est égale à 0, on reste à la mème page et on affiche le msg reçu.
                         document.getElementById('signal').innerText=msg;
                         }    

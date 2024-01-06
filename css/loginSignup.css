@@ -9,6 +9,14 @@ body{
     align-items: center;
     justify-content: center;
 }
+
+.did{
+    margin: 100px auto;
+    border-radius: 20px;
+    text-align: center;
+    padding: 30px;
+    background-color: rgb(177, 177, 219);
+  }
 section{
     background-color: rgb(220, 220, 220);
     width: 60%;

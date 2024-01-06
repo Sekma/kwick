@@ -46,7 +46,10 @@
 							let msg=object.result.message;     // stoquer le message envoyé par l'objet JSON dans le localStorage,
 							localStorage.setItem("msg", msg);  // pour le récupérer et l'afficher dans la page suivante.
 							 
-							window.location.assign('messages.html');// on charge et affiche la page de messagerie.
+									document.getElementById("dialog").show(); 
+                                    document.getElementById('signal').innerText = localStorage.getItem("msg");
+                                    
+                                      setTimeout(function openPage(){window.location.assign('messages.html')},3000);// on charge et affiche la page de messagerie.
 							
 
 						}else if(loginId==0){ // si l'ID est égale à 0, donc le nom d'utilisateur est déja utilisé.

@@ -1,6 +1,4 @@
-// afficher une fenetre (dialog), récuperer et afficher le message de "welcome back".
-document.getElementById("dialog").show(); 
-document.getElementById('signal').innerText = localStorage.getItem("msg");
+
 
 // récuperer le non d'utilisateur pour l'afficher en haut de la page (welcome username).
 const myName = localStorage.getItem("name");

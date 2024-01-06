@@ -11,42 +11,42 @@
         <nav>
             <h1><img src="img/Messaging.png" alt="logo" width="50"> KWICK</h1>
             <h3>Welcome <span id="welcome-username"></span></h3>
-            <input type="submit" value="deconnexion" onclick="logout()">
+            <input type="submit" value="deconnexion" onclick="dialog.show()">
         </nav>
     </header>
     <main>
         <dialog id="dialog" class="did">
-            <p id="signal"></p>
-            <input type="button" onclick="dialog.close()" value="OK">
+            <p>Voulez-vous déconnecter?</p>
+            <input type="button" onclick="dialog.close()" value="Non">
+            <input type="button" onclick="logout()" value="Oui">
         </dialog>
         <section class="connected">
             <ul class="logged" id="logged">
-                <li>xxx</li>
-                <li>paul</li>
-                <li>rose</li>
-                <li>diana</li>
             </ul>
         </section>
         <section  class="discussion">
-            <div class="discussion-membres">
+            <div id="discussion-membres" class="discussion-membres">
                 <div class="right">
                     <h3>ena</h3>
                     <p>hello</p>
                 </div>
+
                 <div class="left">
                     <h3>salah</h3>
                     <p>hello</p>
                 </div>
+                
             </div>
            
-            <div class="msg">
-                <input type="text" class="writing">
-                <input type="button" value=">" class="btn-send">
-            </div>
+            <form class="msg" id="sendForm" onsubmit="sendMessage()">
+                <input type="text" class="writing" id="say">
+                <input type="submit" value=">" class="btn-send">
+            </form>
         </section>
     </main>
-    
     <script src="js/logout.js"></script>
     <script src="js/logged.js"></script>
+    <script src="js/say.js"></script>
+    <script src="js/talk.js"></script>
 </body>
 </html>
