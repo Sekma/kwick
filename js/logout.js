@@ -1,3 +1,6 @@
+//*********************************** */ ajouter une fonction pour ne plus charger la page si le localStorage est vide.
+//*********************************** */ + window.location (index.html); *****************************************************
+        
         async function logout(){ // en clickant sur le bouton déconnexion, on appel la fonction
 
             let id = localStorage.getItem("id");       // on récupere l'ID et le "token" du localStorage, qui sont déja stoqués à la 

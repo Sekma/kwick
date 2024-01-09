@@ -81,8 +81,10 @@ nav h1{
   .discussion .right{
     text-align: right;
     width: 90%;
+    margin-top: 10px;
   }
   .discussion .left{
     text-align: left;
     width: 90%;
+    margin-top: 10px;
   }

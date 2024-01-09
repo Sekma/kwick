@@ -11,6 +11,9 @@
 
 		let confirmPassword = document.getElementById('confirmPassword').value; 
 		localStorage.setItem("confirmPassword", confirmPassword);
+
+		const time = parseInt(Date.now()/1000-172800);
+		localStorage.setItem("time", time);
 	};
 
 		

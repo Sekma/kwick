@@ -5,6 +5,10 @@ function login(){// quand l'utilisateur rempli le formulaire de login et click s
 
     let password = document.getElementById('password').value;
     localStorage.setItem("password", password); // stoquer le nom et le mot de passe dans localStorage pour les utiliser dans la suite du code.
+
+    const time = parseInt(Date.now()/1000-172800);
+    
+    localStorage.setItem("time", time);
 };
 
     
@@ -41,8 +45,8 @@ function login(){// quand l'utilisateur rempli le formulaire de login et click s
                                     document.getElementById("dialog").show(); 
                                     document.getElementById('signal').innerText = localStorage.getItem("msg");
                                     
-                                      // et après 3 secondes on charge et affiche la page de messagerie.
-                                      setTimeout(function openPage(){window.location.assign('messages.html')},3000);
+                                      // et après 2 secondes on charge et affiche la page de messagerie.
+                                      setTimeout(function openPage(){window.location.assign('messages.html')},2000);
 
                         }else{    // si l'ID est égale à 0, on reste à la mème page et on affiche le msg reçu.
                         document.getElementById('signal').innerText=msg;
