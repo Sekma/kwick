@@ -25,7 +25,7 @@ async function getTalk(){
                 const response_talk = await fetch(url_talk, options_talk); // activer L'URL 
                 const object = await response_talk.json();       // et stoquer la reponse dans un objet JSON.
                 const conversation = object.result.talk.reverse();
-                console.log(conversation);
+         
 //****************************************afficher la conversation**********************************************************
  let block_discussion = document.getElementById('discussion-membres');
  block_discussion.innerHTML="";
