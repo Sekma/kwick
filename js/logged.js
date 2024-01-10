@@ -2,6 +2,7 @@
 
 // récuperer le non d'utilisateur pour l'afficher en haut de la page (welcome username).
 const myName = localStorage.getItem("name");
+
 if(!myName){
     window.location.assign('index.html');
 }else{
@@ -20,6 +21,9 @@ if(!myName){
         const response = await fetch(url, options);  // activer L'URL 
         const object = await response.json();        // et stoquer la reponse dans un objet JSON.
         
+        
+        document.getElementById('logged').innerHTML="";
+
         let users= object.result.user;               //récuperer la listes des utilisateurs connectés dans un objet.
 
     users.forEach(function usersList(item){
@@ -35,5 +39,6 @@ if(!myName){
         console.error(error);
     }
     }
-    get();
+   
+     setInterval(get,1000);
     }

@@ -6,7 +6,7 @@ function login(){// quand l'utilisateur rempli le formulaire de login et click s
     let password = document.getElementById('password').value;
     localStorage.setItem("password", password); // stoquer le nom et le mot de passe dans localStorage pour les utiliser dans la suite du code.
 
-    const time = parseInt(Date.now()/1000-172800);
+    const time = parseInt(Date.now()/1000);
     
     localStorage.setItem("time", time);
 };

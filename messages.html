@@ -28,15 +28,15 @@
             <div id="discussion-membres" class="discussion-membres">
             </div>
            
-            <form class="msg" id="sendForm" onsubmit="sendMessage()">
+            <form class="msg" id="sendForm" onsubmit="sendMessage();return false">
                 <input type="text" class="writing" id="say">
                 <input type="submit" value=">" class="btn-send">
             </form>
         </section>
     </main>
     <script src="js/logged.js"></script>
+    <script src="js/say.js"></script>
     <script src="js/talk.js"></script>
-    <script src="js/reload.js"></script>
     <script src="js/logout.js"></script>
 </body>
 </html>
