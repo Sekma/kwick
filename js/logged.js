@@ -1,4 +1,6 @@
-
+function strUcFirst(a) {
+    return (a+'').charAt(0).toUpperCase() + (a+'').substr(1);
+  }
 
 // récuperer le non d'utilisateur pour l'afficher en haut de la page (welcome username).
 const myName = localStorage.getItem("name");
@@ -6,7 +8,7 @@ const myName = localStorage.getItem("name");
 if(!myName){
     window.location.assign('index.html');
 }else{
-    document.getElementById('welcome-username').innerHTML = myName;
+    document.getElementById('welcome-username').innerHTML = strUcFirst(myName);
 
     // récuperer le token pour le lien d'affichage des utilisateurs connectés
     let token = localStorage.getItem("token");
@@ -27,9 +29,13 @@ if(!myName){
         let users= object.result.user;               //récuperer la listes des utilisateurs connectés dans un objet.
 
     users.forEach(function usersList(item){
+       
+          user_name=strUcFirst(item);
+
         if(item!==myName && item!=="null"){      // annuler les résultats "null" et le nom d'utilisateur de la liste envoyée.
             const node = document.createElement("li");
-            node.innerHTML=item;                 
+            
+            node.innerHTML = user_name;                 
             document.getElementById("logged").appendChild(node); // afficher le resultat dans une liste "ul".
         }
     });

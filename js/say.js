@@ -1,4 +1,7 @@
       
+    window.onload = function() {
+        document.getElementById("say").focus();
+      }
     function sendMessage(){ // faire l'appel du fonction sendMessage() quand l'utilisateur rempli le champ de message, et clique sur le bouton.
         let say = document.getElementById("say").value; // récuperer la valeur du champ.
         let iSay = encodeURI(say);                      // encoder la valeur pour l'URL.

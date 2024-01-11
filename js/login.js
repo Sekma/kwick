@@ -2,7 +2,7 @@
 function login(){
     // récupérer les valeurs des champs du formulaire d'ENTRER.
 
-    let name = document.getElementById('username').value; // le nom d'utilisateur,
+    let name = document.getElementById('username').value.toLowerCase(); // le nom d'utilisateur,
     localStorage.setItem("name", name); 
 
     let password = document.getElementById('password').value; // et le mot de passe.
@@ -21,7 +21,11 @@ function login(){
             let name = localStorage.getItem("name");
             let password = localStorage.getItem("password");
             
-            const url = 'https://greenvelvet.alwaysdata.net/kwick/api/login/'+name+'/'+password; // l'URL du Login.
+            function strUcFirst(a) {
+                return (a+'').charAt(0).toUpperCase() + (a+'').substr(1);
+              }
+            let user_name = strUcFirst(name);
+            const url = 'https://greenvelvet.alwaysdata.net/kwick/api/login/'+user_name+'/'+password; // l'URL du Login.
             const options = {
             method: 'GET',
             };
@@ -49,7 +53,7 @@ function login(){
                                     setTimeout(function openPage(){window.location.assign('messages.html')},2000);
 
                         }else{    // si l'ID est égale à 0, on reste à la mème page et on affiche le msg reçu.
-                        document.getElementById('signal').innerText=msg;
+                        document.getElementById('error_signal').innerText=msg;
                         }    
                     }   
                 } 

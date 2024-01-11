@@ -2,7 +2,7 @@
 	function signup(){
 		// récupérer les valeurs des champs du formulaire d'inscription:
 		
-		let name = document.getElementById('username').value; // le nom d'utilisateur,
+		let name = document.getElementById('username').value.toLowerCase(); // le nom d'utilisateur,
 		localStorage.setItem("name", name);
 
 		let password = document.getElementById('password').value; // le mot de passe,
@@ -58,11 +58,11 @@
 							
 
 						}else if(loginId==0){ // si l'ID est égale à 0, donc le nom d'utilisateur est déja utilisé.
-							document.getElementById('signal').innerText=object.result.message;// on reste à la meme page est on affiche le message reçu.
+							document.getElementById('error_signal').innerText=object.result.message;// on reste à la meme page est on affiche le message reçu.
 						}
 						
 					}else if(password!==confirmPassword && name){ // si le mot de passe est la confirmation ne sont pas égales.
-						document.getElementById('signal').innerText="Vérifiez votre mot de passe"; // on resta à la mème page et on affiche ce message.
+						document.getElementById('error_signal').innerText="Vérifiez votre mot de passe"; // on resta à la mème page et on affiche ce message.
 					}
 				
 					

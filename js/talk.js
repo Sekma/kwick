@@ -35,7 +35,11 @@ await conversation.forEach(element => {
     let say = document.createElement('p');
     if(element.content!=="null"){
         
-        membre.innerText = element.user_name;
+        function strUcFirst(a) {
+            return (a+'').charAt(0).toUpperCase() + (a+'').substr(1);
+          }
+
+        membre.innerText = strUcFirst(element.user_name);
         say.innerText = element.content;
 
         block_discussion.appendChild(membre_say);
