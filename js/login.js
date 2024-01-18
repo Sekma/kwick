@@ -2,7 +2,7 @@
 function login(){
     // récupérer les valeurs des champs du formulaire d'ENTRER.
 
-    let name = document.getElementById('username').value.toLowerCase(); // le nom d'utilisateur,
+    let name = document.getElementById('username').value.toLowerCase(); // le nom d'utilisateur, et le transformer en miniscule
     localStorage.setItem("name", name); 
 
     let password = document.getElementById('password').value; // et le mot de passe.

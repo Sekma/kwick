@@ -2,7 +2,7 @@
 	function signup(){
 		// récupérer les valeurs des champs du formulaire d'inscription:
 		
-		let name = document.getElementById('username').value.toLowerCase(); // le nom d'utilisateur,
+		let name = document.getElementById('username').value.toLowerCase(); // le nom d'utilisateur, et le transformer en miniscule
 		localStorage.setItem("name", name);
 
 		let password = document.getElementById('password').value; // le mot de passe,
