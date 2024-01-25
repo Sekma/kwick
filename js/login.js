@@ -46,11 +46,13 @@ function login(){
                                     localStorage.setItem("token", token); //stoquer le "token" et l'ID envoyés par l'objet JSON dans le localStorage,
                                     localStorage.setItem("id",loginId);   // pour les utiliser dans la suite du code.
 
+                                    document.getElementById("form_section").style.display = "none";
+
                                     document.getElementById("dialog").show(); // ouvrir une fenetre de dialog.
                                     document.getElementById('signal').innerText = msg; // et afficher le message d'accueil "welcome back".
                                     
                                     // et après 2 secondes on charge et affiche la page de messagerie.
-                                    setTimeout(function openPage(){window.location.assign('messages.html')},2000);
+                                    setTimeout(function openPage(){window.location.assign('messages.html')},3000);
 
                         }else{    // si l'ID est égale à 0, on reste à la mème page et on affiche le msg reçu.
                         document.getElementById('error_signal').innerText=msg;

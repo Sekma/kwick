@@ -53,8 +53,10 @@
 									document.getElementById("dialog").show(); // ouvrir une fenetre de dialog.
                                     document.getElementById('signal').innerText = msg; // et afficher le message d'accueil.
 									
+									document.getElementById("form_section").style.display = "none";
+
 									// après 2 secondes on charge et affiche la page de messagerie.
-                                    setTimeout(function openPage(){window.location.assign('messages.html')},2000);
+                                    setTimeout(function openPage(){window.location.assign('messages.html')},3000);
 							
 
 						}else if(loginId==0){ // si l'ID est égale à 0, donc le nom d'utilisateur est déja utilisé.
