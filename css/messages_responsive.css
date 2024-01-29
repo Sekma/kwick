@@ -19,7 +19,7 @@
     }
     main .connected{
         width: 95%;
-        height: 8vh;
+        height: 7vh;
         overflow-x: auto;
     }
     main .logged{

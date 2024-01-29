@@ -6,6 +6,7 @@ body{
   height: 100vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
 }
 body::before {
