@@ -1,0 +1,9 @@
+@media (max-width: 767px){
+    body{
+        font-size: medium;
+    }
+    form{
+        padding: 10px;
+        width: 200px;
+    }
+}

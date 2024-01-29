@@ -1,0 +1,42 @@
+@media (max-width: 992px){
+    main{
+        width: 95%;
+    }
+      .logged li::before {
+        margin-left: 20px;
+      }
+}
+@media (max-width: 767px){
+    body{
+        font-size: small;
+    }
+    nav h3{
+        display: none;
+    }
+    main{
+        gap: 10px;
+        height: 80vh;
+    }
+    main .connected{
+        width: 95%;
+        height: 8vh;
+        overflow-x: auto;
+    }
+    main .logged{
+        flex-direction: row;
+        align-items: center;
+        margin-top: 0;
+    }
+    main .discussion{
+        width: 95%;
+    }
+    main{
+        flex-direction: column;
+    }
+    input.writing{
+        width: 85%;
+    }
+    input.btn-send{
+        width: 10%;
+    }
+}

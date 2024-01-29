@@ -76,14 +76,14 @@ nav a{
     width: 80%;
     margin: auto;
   }
-  .connected{
+  main .connected{
     position: relative;
     width: 20%;
     height: 80vh;
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.8);
   }
-  .logged{
+  main .logged{
     list-style-type: none;
     display: flex;
     flex-direction: column;
@@ -97,7 +97,7 @@ nav a{
     right: 10px;
     margin-left: 50px;
   }
-  .discussion{
+  main .discussion{
     position: relative;
     width: 80%;
     height: 80vh;
@@ -107,10 +107,8 @@ nav a{
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.8);
   }
-  .discussion div{
+  main .discussion div.discussion-membres{
     padding: 5px;
-  }
-  .discussion div.discussion-membres{
     overflow: auto;
     max-height: 100%;
     display: flex;
@@ -120,17 +118,30 @@ nav a{
   input.writing{
     padding: 5px;
     width: 90%;
+    border: none;
+    border-radius: 5px;
   }
  input.btn-send{
     padding: 5px;
     width: 5%;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(12, 53, 106);
+    color: white;
+    transition: all 0.5s;
   }
-  .discussion .right{
+  input.btn-send:hover{
+    background-color: white;
+    color: rgb(12, 53, 106);
+    cursor: pointer;
+  }
+  main .discussion .right{
     text-align: right;
     width: 90%;
     margin-top: 10px;
   }
-  .discussion .left{
+  main .discussion .left{
     text-align: left;
     width: 90%;
     margin-top: 10px;

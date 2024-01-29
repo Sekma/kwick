@@ -61,6 +61,8 @@ section h1{
     position: relative;
     color: rgb(12, 53, 106);
     background-color: rgba(255, 255, 255, 0.7);
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
 }
 section p{
     position: relative;
@@ -70,6 +72,8 @@ section p{
 }
 form{
     background-color: rgba(255, 255, 255, 0.7);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
     display: flex;
     flex-direction: column;
     position: relative;
