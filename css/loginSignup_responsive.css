@@ -2,6 +2,9 @@
     body{
         font-size: medium;
     }
+    body::before {
+        opacity: 0;
+      }
     form{
         padding: 10px;
         width: 200px;
