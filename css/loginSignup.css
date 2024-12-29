@@ -6,6 +6,7 @@ body{
     width: 100%;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -52,7 +53,9 @@ body::before {
     color: rgb(12, 53, 106);
     cursor: pointer;
   }
-  
+  #form_section{
+    margin-top: 50px;
+  }
 section h1{
     display: flex;
     align-items: center;
@@ -112,4 +115,21 @@ form a{
 }
 form a:hover{
     color: rgb(0, 110, 255);
+}
+footer{
+    color: #000000;
+    margin-top: auto;
+    text-align: center;
+    opacity: 0.5;
+    background-color: #ffffff;
+    width: 100vw;
+}
+footer span{
+    font-size: x-small;
+}
+footer .createur a i{
+    color: #000000;
+    font-size: small;
+    margin: 20px 10px;
+    opacity: 0.8;
 }
